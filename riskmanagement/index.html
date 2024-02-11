@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
+<title>Excel File Comparison</title>
+
+</head>
+<body>
+  <label for="userInput">Select a value:</label>
+  <select id="userInput">
+    <option value="Riesgo altamente peligroso">Riesgo altamente peligroso</option>
+    <option value="no hay aprobacines">no hay aprobacines</option>
+    <option value="no hubo mmr">no hubo mmr</option>
+    <!-- agregar más opciones como sea necesario. Voy a investigar como generarlñas de acuerdo al excel -->
+  </select>
+
+  <button id="compareButton">Compare</button>
+
+  <table id="resultTable" border="1">
+    <!-- Tabla para mostrar los resultados -->
+  </table>
+</body>
+<script src="buscar.js"></script>
+</html>
