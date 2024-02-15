@@ -9,7 +9,7 @@ $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
 $text-color: #fff !default;
-$bg-color: rgba(43, 45, 47, 1);
+$bg-color: #1d1d1f;
 $card-bg-color: linear-gradient(
   145deg,
   rgba(115, 115, 115, 0.15) 15%,
@@ -31,4 +31,24 @@ html {
   
   body {
     height: 100%;
+    width: 100%;
+  }
+
+  #landing {
+    background: $bg-color;
+    color: $text-color;
+    display: flex;
+    height: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .landing-title {
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 40%;
   }

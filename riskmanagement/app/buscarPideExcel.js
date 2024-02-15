@@ -1,3 +1,4 @@
+//en este script, se slicita un archivo excel al usuario para hacer una comparación
 document.getElementById("buscar").addEventListener("click", compareExcel());
 
 
