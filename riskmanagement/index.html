@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
-<style ></style>
-<title>DS&P Risk Management</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.4/xlsx.full.min.js"></script>
+    <title>DS&P Risk Management</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo">Data Security & Privacy</a>
+        </div>
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">DS&P Framework</a></li>
+            <li class="nav__item"><a href="pages/about.html" class="nav__link">About</a></li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <ion-icon class="nav__icon" name="menu"></ion-icon>
+        </div>
+      </nav>
+    </header>
 
-</head>
+    <!-- Home -->
+    <main class="main-bg">
+      <img src="assets/img/2629698.jpg" alt="" class="main-bg__fondo">
+      <div class="home bd-grid">
+        <h1 class="home__title">
+          <span id="txt-rotate" data-period="2000"
+            data-rotate='["DS&P Risk Management Tool", "Select your escenario"]'
+          >
+        </h1>
 
-<body style="background-color: #1d1d1f">
-  <div id="landing">
-    <div class="landing-title" >
-      <h1 style="position: absolute; top:120px; text-align: center;">
-        <span id="txt-rotate" data-period="2000"
-          data-rotate='["DS&P Risk Management Tool", "Select your escenario"]'
-        >
-        </span>
-      </h1>
-    </div>
-    <div id="seleccionador" style = "position: absolute; top:380px; width: 100%; height: 100%;">
-      <div id="selecEscenario">
-        <label for="escenario">Selecciona un escenario de riesgo:</label>
-        <select id="escenario" style="position: absolut; top: 200px;">
-          <option value="Riesgo altamente peligroso">Riesgo altamente peligroso</option>
-          <option value="no hay aprobacines">no hay aprobacines</option>
-          <option value="no hubo mmr">no hubo mmr</option>
-  
-          <!-- agregar más opciones como sea necesario. Voy a investigar como generarlñas de acuerdo al excel -->
-        </select>
-  
-        <button id="buscar" style="position: absolute; right: 100px;">Compare</button>
+
+        <div class="home__buttons">
+          <!-- <a href="" class="button">Selecciona tu Escenario</a> -->
+          <nav class="nav__escenarios">
+            <ul class="list">
+              <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                  <img src="" alt="">
+                  <a id ="escenario" class="nav__link-lista" value="">Select your escenario</a>
+                  <img src="assets/img/arrow.svg" class="list__arrow">
+                </div>
+                <ul class="list__show">
+                  <li class="list__in">
+                    <img src="assets/img/escenarios/risk_mgmt.svg" class="list__img">
+                    <a class="nav__link-lista nav__link--inside">Risk Management</a>
+                  </li>
+                  <li class="list__in">
+                    <img src="assets/img/escenarios/access_mgmt.svg" class="list__img">
+                    <a class="nav__link-lista nav__link--inside">Access Management</a>
+                  </li>
+                  <li class="list__in">
+                    <img src="assets/img/escenarios/incidents.svg" class="list__img">
+                    <a  class="nav__link-lista nav__link--inside">Incident Response</a>
+                  </li>
+                  <li class="list__in">
+                    <img src="assets/img/escenarios/on-off_boarding.svg" class="list__img">
+                    <a class="nav__link-lista nav__link--inside">On/Off Boarding</a>
+                  </li>
+                  <li class="list__in">
+                    <img src="assets/img/escenarios/regulations.svg" class="list__img">
+                    <a class="nav__link-lista nav__link--inside">Regulations</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- ya veremos como agregar las cosas aqu´´i -->
+          <a id="buscar" class="button">Generate</a>
+        </div>
+        <div class="tabla">
+          <table id="tablaResults" border="1">
+            <!-- Tabla para mostrar los resultados -->
+          </table>
+        </div>
       </div>
-      <div id="tablaRiesgo" style="position: absolute; top: 150; right: 370;">
-        <table id="tablaResults" border="1">
-          <!-- Tabla para mostrar los resultados -->
-        </table>
-      </div>
-    </div>
-  </div>  
-  <div id="particles-js"></div>
-  <script src="app/particles.js"></script>
-  <footer class="footer">
-    <p>
-      &copy; 2024 Designed & Developed by Ariel Sánchez & Manuel Pérez Pastrana
-    </p>
-    <p>
-      powered by
-      <a class="highlight-link" href="https://pages.github.com/" target="_blank" rel="noreferrer">
-        Github Pages
-      </a>
-    </p>
-  </footer>
-</body>
-<script src="app/buscar2.js"></script>
+    </main>
+    <!-- iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- main js -->
+    <script src="app/app.js"></script>
+  </body>
 </html>
